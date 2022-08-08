@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=2mf7bb-z#u^sndvq+q6%ouzag9%er^nd#1#)u-+bt@s8zy_ky'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,7 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #S3 config
 DEFAULT_FILE_STORAGE = 'minio_storage.storage.MinioMediaStorage'
 STATICFILES_STORAGE = 'minio_storage.storage.MinioStaticStorage'
-MINIO_STORAGE_ENDPOINT = 'localhost:9000'
+MINIO_STORAGE_ENDPOINT = 'minio.cafstechnology.id:9000'
 MINIO_STORAGE_STATIC_BUCKET_NAME = "media-cms-static"
 STATIC_URL = f'https://{MINIO_STORAGE_ENDPOINT}/{MINIO_STORAGE_STATIC_BUCKET_NAME}/'
 MINIO_STORAGE_USE_HTTPS = True
